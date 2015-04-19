@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VR test 4</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <style>
+      html{
+        height: 100%;
+      }
+      body {
+        margin: 0px;
+        overflow: hidden;
+        font-family: sans-serif;
+        font-size: 15px;
+        height: 100%;
+      }
+      #canvas3d {
+        height: 100%;
+      }
+      #controls_top{
+        position: absolute;
+        z-index: 100;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+      }
+      #controls_bottom{
+        position: absolute;
+        z-index: 100;
+        bottom: 25px;
+        left: 25px;
+      }
+      #fullscreen{
+        visibility: hidden;
+        float: right;
+      }
+      #output{
+        padding: 10px;
+        background-color: #ffffff;
+        display: inline-block;
+      }
+      #output2{
+        padding: 10px;
+        background-color: #ffffff;
+        display: inline-block;
+      }
+      .unselectable{
+        font-size: 15px;
+        -webkit-user-select: none;  /* Chrome all / Safari all */
+        -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+        -o-user-select: none;
+        user-select: none;
+      }
+      #tilt, #rotation{
+        visibility: hidden;
+      }
+      </style>
+  </head>
+  <body>
+    <!--
+    -->
+    <div id="controls_top">
+      <button class="unselectable" id="fullscreen">fullscreen</button>
+      <div id="output"></div><br>
+      <div id="output2"></div>
+    </div>
+    <div id="controls_bottom">
+      <button class="unselectable" id="forward">forward</button>
+      <button class="unselectable" id="backward">backward</button>
+      <button class="unselectable" id="left">left</button>
+      <button class="unselectable" id="right">right</button>
+      <input type="range" class="unselectable" id="tilt" min="-180" max="180" value="0">
+      <input type="range" class="unselectable" id="rotation" min="-180" max="180" value="0">
+    </div>
+    <div id="canvas3d"></div>
+
+    <script src="lib/threejs/three.min.js"></script>
+
+    <!-- for oculus -->
+    <script src="lib/threejs/VREffect.js"></script>
+    <script src="lib/threejs/OrbitControls.js"></script>
+
+    <!-- for mobile devices -->
+    <script src="lib/threejs/DeviceOrientationControls.js"></script>
+
+    <script src="build/build.js"></script>
+  </body>
+</html>
