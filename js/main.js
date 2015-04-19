@@ -2,7 +2,7 @@
 
 require('babelify/polyfill');
 
-import scene3d from './scene3d-2';
+import scene3d from './scene3d';
 
 window.onload = function(){
 
