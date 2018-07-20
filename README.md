@@ -40,4 +40,4 @@ Starts a local webserver at port 8080.
 
 ## Live example
 
-[http://tweedegolf.github.io/vr-test4/](http://tweedegolf.github.io/vr-test4/)
+[https://tweedegolf.github.io/vr-test4/](https://tweedegolf.github.io/vr-test4/)
